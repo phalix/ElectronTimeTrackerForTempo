@@ -1,5 +1,6 @@
 # ElectronTimeTrackerForTempo
-An Electron Based App as a Time Tracker for Tempo/JIRA
+An Electron Based App as a Time Tracker for Tempo/JIRA.
+The idea for this application was to avoid the necessity to login into jira for booking times in tempo, but be able to directly to do this in a constantly running desktop app. Electron was used for two things, platform indepedency and reusability of already existing code.
 
 
 This Application is heavily inspired by 
@@ -13,6 +14,8 @@ https://github.com/gistia/tempo
 ### Additionally it uses the Oracle JET Framework for the Layout.
 http://www.oracle.com/webfolder/technetwork/jet/index.html
 
+### Used as a Basis was
+https://github.com/electron/electron-quick-start
 
 I started this project due to the fact that the gistia project is not supporting the reworked API from JIRA. Also I was not satisfied with the other available solutions. I wanted to have something that is easy to use, convenient and fast.
 
@@ -28,3 +31,5 @@ To use the application click on the top right and navigate to settings. Enter yo
 Better Error Management and User Help.
 
 The Timer is shown only in decimals.
+
+Creation of Windows Executable
