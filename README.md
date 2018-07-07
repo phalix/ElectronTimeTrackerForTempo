@@ -4,13 +4,13 @@ An Electron Based App as a Time Tracker for Tempo/JIRA
 
 This Application is heavily inspired by 
 
-###Interface and API by
+### Interface and API by
 https://github.com/ArcBees/Tempora
 
-###Layout and Usability by
+### Layout and Usability by
 https://github.com/gistia/tempo
 
-###Additionally it uses the Oracle JET Framework for the Layout.
+### Additionally it uses the Oracle JET Framework for the Layout.
 http://www.oracle.com/webfolder/technetwork/jet/index.html
 
 
