@@ -20,6 +20,7 @@ The App is built in Javascript and HTML. It uses the electron framework to provi
 
 To use the application click on the top right and navigate to settings. Enter your Server URL, Username and password. Now you can select a project, create a JQL Filter and select one or multiple tasks to run a timer on them. You can cancel the timer, stop it, change the time and confirm it. Then the times will be transferred to JIRA.
 
+<img width="1202" alt="screenshot 2018-07-07 22 25 21" src="https://user-images.githubusercontent.com/2444534/42414411-3da70484-8235-11e8-9bd9-dad707c4dc80.png">
 
 
 
