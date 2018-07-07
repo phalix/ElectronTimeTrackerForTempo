@@ -28,3 +28,5 @@ To use the application click on the top right and navigate to settings. Enter yo
 Better Error Management and User Help.
 
 The Timer is shown only in decimals.
+
+Creation of Windows Executable
