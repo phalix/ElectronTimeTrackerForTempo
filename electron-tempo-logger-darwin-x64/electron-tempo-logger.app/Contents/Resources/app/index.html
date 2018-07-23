@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Tempo Time Management with Electron</title>
+    <link rel="icon" type="image/x-icon" href="./lib/oj/css/images/favicon.ico"/>
+    <link rel="apple-touch-icon-precomposed" href="./lib/oj/css/images/touchicon.png"/>
+    <meta name="apple-mobile-web-app-title" content="Oracle JET"/>
+    <link rel="stylesheet" id="css" href="./lib/oj/css/libs/oj/v5.1.0/alta/oj-alta-min.css"/>
+    <script>
+      window.nodeRequire = require;
+      delete window.require;
+    </script>
+    
+    <script type="text/javascript" src="./lib/oj/js/libs/require/require.js"></script>
+    <script src="./js/requirejsconfig.js"></script>
+    <script>
+      //requirejs.nodeRequire = require;
+      require = requirejs;
+      require.nodeRequire = window.nodeRequire;
+
+      window.m = window.module;
+      //delete window.module;
+      window.p = window.process;
+      //delete window.process;
+      /*require = function(e,t,i,r){
+        console.log(e);
+        if(e instanceof Array){
+          return requirejs(e,t,i,r);
+        }else{
+          return requirejs.nodeRequire(e,t,i,r);
+        }
+      }
+      require.nodeRequire=require;*/
+    </script>
+    <script src="./js/mainpage.js"></script>
+  </head>
+  <body>
+      <script>
+          /*setTimeout(function(){
+            requirejs.nodeRequire = window.nodeRequire;
+            require = requirejs;
+          },0);*/
+          
+        </script>
+      
+    
+    <div id="sampleDemo" style="" class="demo-padding demo-container">
+      <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+        
+        <!-- Template for rendering navigation items -->
+        <script type="text/html" id="navTemplate">
+          <li><a href="#">
+            <span :class="[[$data['iconClass']]]"></span>
+            <oj-bind-text value="[[$data['name']]]"></oj-bind-text>
+          </a></li>
+        </script>
+        <!-- Page -->
+        <div id="page" class="oj-web-applayout-page">
+          <!-- Header -->
+          <header role="banner" class="oj-web-applayout-header">
+            <div class="oj-flex-bar oj-sm-align-items-center oj-web-applayout-max-width">
+              <div class="oj-flex-bar-middle oj-sm-align-items-baseline">
+                <span role="img" class="oj-icon demo-oracle-icon" title="Oracle Logo"></span>
+                <h1 class="oj-sm-only-hide oj-web-applayout-header-title" title="Application Name">
+                  <oj-bind-text value="[[appName]]"></oj-bind-text>
+                </h1>
+              </div>
+              <div class="oj-flex-bar-end">
+                <!-- Responsive Toolbar -->
+                <oj-toolbar>
+                  <oj-menu-button id="userMenu" display="[[smScreen() ? 'icons' : 'all']]" chroming="half">
+                    <span>
+                      <oj-bind-text value="[[userLogin]]"></oj-bind-text>
+                    </span>
+                    <span slot="endIcon" :class="[[smScreen() ? 'oj-icon demo-avatar-icon' : 'oj-component-icon oj-button-menu-dropdown-icon']]"></span>
+                    <oj-menu slot="menu" id="menu1" style="display:none" on-oj-action="{{valueChangedListener}}">
+                      <oj-option id="settings" value="settings">Settings</oj-option>
+                      <oj-option id="out" value="out">Sign Out</oj-option>
+                    </oj-menu>
+                  </oj-menu-button>
+                </oj-toolbar>
+              </div>
+            </div>
+            <!-- Navigation Bar -->
+            <div role="navigation" class="oj-web-applayout-max-width oj-web-applayout-navbar">
+              <oj-navigation-list data="[[navDataSource]]"
+                                  :class="[[smScreen() ? '' : 'oj-md-condense oj-md-justify-content-flex-end']]"
+                                  display="[[smScreen() ? 'icons' : 'all']]"
+                                  edge="top"
+                                  item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('navTemplate', true)]]"
+                                  selection="{{router.stateId}}">
+              </oj-navigation-list>
+            </div>
+          </header>
+          <!-- Content -->
+          <div class="oj-web-applayout-content oj-web-applayout-max-width">
+            <div class="oj-flex oj-flex-items-pad"> 
+              <div class="oj-flex-item" id="content" role="main" data-bind="ojModule: router.moduleConfig">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+    
+  </body>
+</html>

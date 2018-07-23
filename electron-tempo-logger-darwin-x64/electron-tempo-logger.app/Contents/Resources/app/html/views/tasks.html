@@ -1,0 +1,32 @@
+<div>
+        <h2>Tasks</h2>
+        <oj-list-view id="listview" aria-label="list to show selection features" 
+    data="[[tasks]]" selection="{{selectedItems}}"
+        selection-required="false"
+        on-selection-changed="[[handleSelectionChanged]]"
+        selection-mode="single"
+        item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('taskItem', true)]]">
+    </oj-list-view>
+
+    <script type="text/html" id="taskItem">
+    <li data-bind="attr: {id: 'task' + value}">
+        <div class="oj-flex oj-sm-flex-items-initial" >
+            <div class="oj-flex-item">
+                <span data-bind="text: $data.label"></span>
+            </div>
+            <div class="oj-flex-item oj-helper-margin-start-auto">
+                <oj-button class='oj-button-primary' on-oj-action='[[$parent.addTimer]]' 
+                chroming='full'>
+                <span slot="startIcon" class="oj-fwk-icon oj-fwk-icon-clock"></span>
+                Add Timer
+                </oj-button>
+            </div>
+        </div>
+        
+
+    </li>
+    </script>
+
+
+    
+    </div>

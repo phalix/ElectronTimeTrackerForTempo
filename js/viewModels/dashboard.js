@@ -135,7 +135,9 @@ define(['ojs/ojcore', 'knockout', 'jquery', './appController',
             };
 
             console.log(worklog);
-            WorklogService.createWorklog(worklog);
+            WorklogService.createWorklog(worklog).then((e)=>{
+                self.deleteWorklog(e,d,c);
+            });
             
 
     
